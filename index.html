@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Redirect</title>
+    <title>WhatsApp</title>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.ico">
     <style>
         body {
             display: flex;
@@ -21,7 +22,9 @@
     </style>
     <script>
         window.onload = function() {
-            window.location.href = "https://api.whatsapp.com";
+            setTimeout(function() {
+                window.location.href = "https://api.whatsapp.com";
+            }, 3000); // 3000 milliseconds = 3 seconds
         }
     </script>
 </head>
