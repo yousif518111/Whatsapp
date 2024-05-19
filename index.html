@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp</title>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.ico">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>WhatsApp Redirect</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/yousif518111/Whatsapp/main/favicon.png">
     <script>
         window.onload = function() {
-            setTimeout(function() {
+            const visited = localStorage.getItem('visited');
+            if (!visited) {
+                localStorage.setItem('visited', 'true');
+                setTimeout(function() {
+                    window.location.href = "https://api.whatsapp.com";
+                }, 3000); // 3000 milliseconds = 3 seconds
+            } else {
                 window.location.href = "https://api.whatsapp.com";
-            }, 3000); // 3000 milliseconds = 3 seconds
+            }
         }
     </script>
 </head>
 <body>
-    <img src="whatsapp.png" alt="WhatsApp Logo">
 </body>
 </html>
